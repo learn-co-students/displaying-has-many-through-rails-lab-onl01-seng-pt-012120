@@ -1,0 +1,13 @@
+<h1>Doctor: <%= @doctor.name %></h1>
+<h2>Department: <%= @doctor.department %></h2>
+<h3>Patient Appointments:</h3>
+<ol>
+	<% @doctor.appointments.each do |appt| %>
+		<li><%= appt.date_time %> <%= link_to appt.patient_name, patient_path(appt.patient) %></li>
+	<% end %>
+</ol>
+
+<!-- Display Format for DateTime in spec
+"January 11, 2016 at 20:20"
+strftime("%m %d, %Y at %R")
+strftime("Printed on %m/%d/%Y")
