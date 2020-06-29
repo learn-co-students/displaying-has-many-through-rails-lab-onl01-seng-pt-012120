@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'Patient' do
-
+ 
   before do
     @patient = Patient.create(name: "Russell Wilson", age: 27)
     @mcdreamy = Doctor.create(name: "Derek Shepherd", department: "Neurosurgery")
